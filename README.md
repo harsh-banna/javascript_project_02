@@ -10,3 +10,6 @@ it contents three parts
 
 3. async/await
    in the the promise is resolved by useing async and await and catch mathod is used to collect the error       
+
+
+GitHub link= "https://github.com/harsh-banna/javascript_project_02"
