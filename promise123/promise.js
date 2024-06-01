@@ -10,7 +10,7 @@ const fetchData = (url) => { return new Promise((resolve, reject) => { fetch(url
 
 const displayData = () => {
     info.style.visibility = "visible";
-    para.innerHTML = "The data will be printed after 5 sec.";
+    para.innerHTML = "The data will be printed after 5 sec...........";  // loading part
     fetchData(url)
         .then(data => {
             setTimeout(() => {
@@ -19,6 +19,7 @@ const displayData = () => {
         })
         .catch(error => {
             console.error(error);
+            para.innerHTML= `operation timed out ${error}`
         });
     };
         

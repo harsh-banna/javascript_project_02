@@ -8,12 +8,13 @@ btn.addEventListener("click",async ()=>{
     let data = await response.json();
     console.log(data["setup"],data["punchline"])
     para1.innerText = data["setup"]+"------";
-    para2.innerText = "answer will be printed after 5 sec.";
+    para2.innerText = "answer will be printed after 5 sec.";  // loading
     setTimeout(()=>{
         para2.innerText=data["punchline"]+"😂😂😂😂";
     },5000);}
     catch (e) {                                    // to catch the error
         console.log('Error occurred', e);
         alert(`error occured ${e}`);
+        para1.innerHTML= `operation timed out ${error}`
     }
 })
